@@ -9,7 +9,7 @@ To delete cookies manually press extension button (i.e. cookie icon).
 
 To delete cookies using javascript run the following line:
 
-  window.postMessage({ type: "CLEAR_COOKIES" }, "*");
+    window.postMessage({ type: "CLEAR_COOKIES" }, "*");
 
 Future Work
 -----------
