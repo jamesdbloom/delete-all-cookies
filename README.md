@@ -9,7 +9,7 @@ Cookies set on a path are currently not deleted, however future work will fix th
 
 To load chrome with an extension you need to use the following switches:
 
---enable-extensions --load-extension=<path>
+    --enable-extensions --load-extension=<path>
 
 An example of this is given in the chrome_load_extension.sh script.  There is also another script provided that disables crosss origin security chrome_disable_security.sh which is also very useful when using iframes for automated testing.
 
