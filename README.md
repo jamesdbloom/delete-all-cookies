@@ -1,25 +1,37 @@
 delete-all-cookies
 ==================
 
-This Chrome extension that deletes all cookies for domain and superdomains of current page by either pressed button or by executing javascript.
+What This Extension Does
+------------------------
+
+This Chrome extension deletes all cookies (including HTTP only cookies) by either send a postMessage from any javascript on any page or by clicking the extension action (i.e. clicking the icon).
 
 This chrome extension is particularly useful when you need to delete cookies as part of a automated test.
 
-Cookies set on a path are currently not deleted, however future work will fix this issue.
+To delete all cookies using javascript run the following line:
+
+    window.postMessage({ type: "CLEAR_COOKIES_EXTENSION_API" }, "*");
+
+In addition an addition mode is supported that only deletes cookies for the domain and super-domains of current page.
+
+To delete cookies for the domain and super-domains of current page using javascript run the following line:
+
+    window.postMessage({ type: "CLEAR_COOKIES_DOCUMENT" }, "*");
+
+Note: this mode does not delete any cookie that has a path value.
+
+Loading The Extension
+---------------------
 
 To load chrome with an extension you need to use the following switches:
 
     --enable-extensions --load-extension=<path>
 
-An example of this is given in the chrome_load_extension.sh script.  There is also another script provided that disables crosss origin security chrome_disable_security.sh which is also very useful when using iframes for automated testing.
+An example of this is given in the chrome_load_extension.sh script.  This script is designed to work with the following operating systems:
+* linux-gnu - Linux Operating System
+* freebsd - FreeBSD Operating System
+* darwin - Apple Mac Operating System
+* cygwin - Cygwin Operating System
+* win32 - Windows32 Operating System
 
-To delete cookies manually press extension button (i.e. cookie icon).
-
-To delete cookies using javascript run the following line:
-
-    window.postMessage({ type: "CLEAR_COOKIES" }, "*");
-
-Future Work
------------
-
-This extension will be extended to delete all cookies for all domain by using the cookie chrome extension API.
+There is also another script provided that disables the cross origin security chrome_disable_security.sh which is also very useful when using iframes for automated testing.

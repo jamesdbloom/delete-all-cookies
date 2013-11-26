@@ -1,29 +1,21 @@
 {
-	"name": "Delete All Cookies",
-	"description": "Delete All Cookies",
-	"version": "1.0",
-	"permissions": [
-		"activeTab", "tabs", "cookies", "http://*/*", "https://*/*", "background"
-	],
-	"icons": 
-	{ 
-		"48": "icon_cookie48.png",
-		"128": "icon_cookie128.png"
-	},
-	"content_scripts": [
-		{
-			"run_at": "document_idle",
-			"matches": ["http://*/*", "https://*/*"],
-			"js": ["background.js"]
-		}
-	],
-	"background": {
-		"scripts": ["background.js"],
-		"persistent": false
-	},
-	"browser_action": {
-		"default_icon": "icon_cookie.png",
-		"default_title": "Delete All Cookies"
-	},
-	"manifest_version": 2
+    "name": "Delete All Cookies",
+    "description": "Delete All Cookies",
+    "version": "1.0",
+    "permissions": [ "cookies", "tabs", "http://*/*", "https://*/*", "background" ],
+    "icons": { "48": "icon_cookie48.png", "128": "icon_cookie128.png" },
+    "browser_action": {
+        "default_icon": "icon_cookie.png"
+    },
+    "content_scripts": [
+        {
+            "run_at": "document_idle",
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "manifest_version": 2
 }
