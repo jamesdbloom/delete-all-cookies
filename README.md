@@ -6,6 +6,8 @@ What This Extension Does
 
 This Chrome extension deletes all cookies (including HTTP only cookies) by either send a postMessage from any javascript on any page or by clicking the extension action (i.e. clicking the icon).
 
+To install this extension go to the Chrome Web Store: https://chrome.google.com/webstore/detail/delete-all-cookies/ahccjggbdjgjnjfnojfgjlonbidjmijb?hl=en&gl=GB
+
 This chrome extension is particularly useful when you need to delete cookies as part of an automated test.
 
 To delete all cookies using javascript run the following line:
