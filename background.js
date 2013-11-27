@@ -1,4 +1,4 @@
-var removeAllCookies = function() {
+var removeAllCookies = function () {
 
     if (!chrome.cookies) {
         chrome.cookies = chrome.experimental.cookies;
