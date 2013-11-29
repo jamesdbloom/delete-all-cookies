@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# Run chrome in mobile size
+# Run chrome with extension and cross-origin security disabled
 #
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# Run chrome in mobile size
+# Run chrome with extension
 #
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
