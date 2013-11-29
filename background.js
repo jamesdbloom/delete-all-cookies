@@ -19,7 +19,7 @@
             }
         });
 
-        return "CLEARED COOKIES USING EXTENSION API";
+        return "COOKIES_CLEARED_VIA_EXTENSION_API";
     };
 
     chrome.browserAction.onClicked.addListener(function (tab) {
@@ -43,4 +43,12 @@
  to clear cookies using those exposed to extension api:
 
  window.postMessage({ type: "CLEAR_COOKIES_EXTENSION_API" }, "*");
+
+ to receive a notification of when the cookies have been cleared add an event listener as follows:
+
+ window.addEventListener("message", function (event) {
+     if (event.data.type && (event.data.type === "COOKIES_CLEARED_VIA_EXTENSION_API")) {
+         // do something
+     }
+ });
  */

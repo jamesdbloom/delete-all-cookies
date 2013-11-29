@@ -20,6 +20,16 @@ To delete cookies for the domain and super-domains of current page using javascr
 
 Note: the CLEAR_COOKIES_DOCUMENT mode does not delete any cookie that has a path value as this is not possible using the document object.
 
+It is also possible to be notified of when cookies have been cleared.  This is particularly important if a particular operation should not happen until you have guaranteed that cookies have been cleared.
+
+To receive a notification of when the cookies have been cleared add an event listener as follows:
+
+    window.addEventListener("message", function (event) {
+        if (event.data.type && (event.data.type === "COOKIES_CLEARED_VIA_EXTENSION_API")) {
+            // do something
+        }
+    });
+
 Loading The Extension
 ---------------------
 
