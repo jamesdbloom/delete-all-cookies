@@ -64,3 +64,5 @@ The chrome_load_extension.sh script will work with the following operating syste
 * win32 - Windows32 Operating System
 
 There is also another script provided that disables the cross origin security chrome_disable_security.sh which is also very useful when using iframes for automated testing.
+
+<a href="https://plus.google.com/110954472544793839756?rel=author">James D Bloom</a> - <a href="http://blog.jamesdbloom.com">Blog</a>
